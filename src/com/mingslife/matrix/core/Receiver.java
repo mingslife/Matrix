@@ -10,7 +10,7 @@ import java.util.Date;
 import com.mingslife.matrix.entity.Configuration;
 import com.mingslife.matrix.entity.RequestReport;
 
-public class Receiver extends Thread {
+public class Receiver implements Runnable {
 	private static Logger logger = new Logger(Receiver.class);
 
 	private Socket socket;

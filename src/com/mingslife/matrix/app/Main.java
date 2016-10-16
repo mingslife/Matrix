@@ -17,7 +17,7 @@ public class Main {
 		while (true) {
 			Socket socket = serverSocket.accept();
 			Receiver receiver = new Receiver(socket);
-			receiver.start();
+			new Thread(receiver).start();
 		}
 	}
 
