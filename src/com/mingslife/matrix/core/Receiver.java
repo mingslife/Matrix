@@ -24,7 +24,8 @@ public class Receiver implements Runnable {
 			RequestReport requestReport = new RequestReport(inputStream);
 			String method = requestReport.getMethod();
 			String url = requestReport.getUrl();
-			String path = "F:/matrix" + url;
+//			String path = "F:/matrix" + url;
+			String path = "E:/test" + url;
 			int statusCode;
 			String statusMessage;
 			File file = new File(path);
