@@ -25,7 +25,8 @@ public class Receiver implements Runnable {
 			String method = requestReport.getMethod();
 			String url = requestReport.getUrl();
 //			String path = "F:/matrix" + url;
-			String path = "E:/test" + url;
+			int queryIndex = url.indexOf("?");
+			String path = "F:/github/mingslife/LuminoSGCC" + (queryIndex == -1 ? url : url.substring(0, queryIndex));
 			int statusCode;
 			String statusMessage;
 			File file = new File(path);
